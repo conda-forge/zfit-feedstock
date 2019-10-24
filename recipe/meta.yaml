@@ -50,7 +50,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: Physics extension to zfit
+  summary: scalable pythonic model fitting for High Energy Physics
   doc_url: https://zfit.readthedocs.io/
   dev_url: https://github.com/zfit/zfit
 
