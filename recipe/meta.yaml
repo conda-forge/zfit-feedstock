@@ -1,5 +1,5 @@
 {% set name = "zfit" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 26e76eb100c95ed52241f3b552d7dd16f59091a83f5e01b263f6fa9f12b30cfe
+  sha256: 41335512a3a751b23d950866dd503c03c883fca2577461239b049ea90a2e176b
 
 build:
   number: 0
@@ -32,6 +32,7 @@ requirements:
     - typing
     - colorlog
     - texttable
+    - ordered-set
     # Workaround for https://github.com/conda-forge/tensorflow-probability-feedstock/pull/11
     - decorator
     - cloudpickle >=0.6.1
