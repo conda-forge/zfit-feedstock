@@ -32,6 +32,7 @@ requirements:
     - typing
     - colorlog
     - texttable
+    - numdifftools
     # Workaround for https://github.com/conda-forge/tensorflow-probability-feedstock/pull/11
     - decorator
     - cloudpickle >=0.6.1
