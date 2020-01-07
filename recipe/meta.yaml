@@ -1,5 +1,5 @@
 {% set name = "zfit" %}
-{% set version = "0.3.7" %}
+{% set version = "0.4.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41335512a3a751b23d950866dd503c03c883fca2577461239b049ea90a2e176b
+  sha256: a9d7f226080ef00693b5307abd45d05458a64bff4d575f4bb0a524dcfd441c52
 
 build:
   number: 0
@@ -22,8 +22,8 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python >=3.6
-    - tensorflow-base >=1.14.0
-    - tensorflow-probability >=0.6.0
+    - tensorflow-base >=2.0.0
+    - tensorflow-probability >=0.8.0
     - scipy >=1.2
     - uproot
     - pandas
@@ -33,6 +33,7 @@ requirements:
     - colorlog
     - texttable
     - ordered-set
+    - numdifftools
     # Workaround for https://github.com/conda-forge/tensorflow-probability-feedstock/pull/11
     - decorator
     - cloudpickle >=0.6.1
@@ -44,14 +45,14 @@ test:
     - zfit.minimizers
     - zfit.models
     - zfit.util
-    - zfit.ztf
+    - zfit.z
 
 about:
   home: https://github.com/zfit/zfit
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: Physics extension to zfit
+  summary: scalable pythonic model fitting for High Energy Physics
   doc_url: https://zfit.readthedocs.io/
   dev_url: https://github.com/zfit/zfit
 
