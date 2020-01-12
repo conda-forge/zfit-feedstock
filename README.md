@@ -7,7 +7,7 @@ Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: Physics extension to zfit
+Summary: scalable pythonic model fitting for High Energy Physics
 
 
 
