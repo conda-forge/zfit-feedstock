@@ -1,17 +1,17 @@
 {% set name = "zfit" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2a2aa29d504579d1c9e821fb86de52c835b4ec241227d32f28d0e1073f6586e6
+  sha256: 17f79e7a5d378904308884c8a647096304fdc7b9a0cc1d3a26b77d4c1880828c
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv "
+  script: '{{ PYTHON }} -m pip install . -vv '
   noarch: python
 
 requirements:
