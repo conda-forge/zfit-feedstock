@@ -22,7 +22,7 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python >=3.6
-    - tensorflow-base >=2.0.0
+    - tensorflow-base >=2.1.0
     - tensorflow-probability >=0.8.0
     - scipy >=1.2
     - uproot
