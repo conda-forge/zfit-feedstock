@@ -117,5 +117,6 @@ Feedstock Maintainers
 =====================
 
 * [@chrisburr](https://github.com/chrisburr/)
+* [@henryiii](https://github.com/henryiii/)
 * [@mayou36](https://github.com/mayou36/)
 
