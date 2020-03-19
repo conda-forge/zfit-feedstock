@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.6,<3.8
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
-    - python >=3.6
+    - python >=3.6,<3.8
     - tensorflow-base >=2.1.0
     - tensorflow-probability >=0.8.0
     - scipy >=1.2
@@ -59,3 +59,4 @@ extra:
   recipe-maintainers:
     - chrisburr
     - mayou36
+    - henryiii
