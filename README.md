@@ -5,7 +5,7 @@ Home: https://github.com/zfit/zfit
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: scalable pythonic model fitting for High Energy Physics
 
