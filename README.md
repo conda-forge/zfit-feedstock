@@ -5,11 +5,13 @@ Home: https://github.com/zfit/zfit
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zfit-feedstock/blob/master/LICENSE.txt)
 
 Summary: scalable pythonic model fitting for High Energy Physics
 
+Development: https://github.com/zfit/zfit
 
+Documentation: https://zfit.readthedocs.io/
 
 Current build status
 ====================
