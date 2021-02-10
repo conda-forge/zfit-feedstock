@@ -36,9 +36,6 @@ requirements:
     - numdifftools
     - colored
     - colorama
-    # Workaround for https://github.com/conda-forge/tensorflow-probability-feedstock/pull/11
-    - decorator
-    - cloudpickle >=0.6.1
 
 test:
   imports:
