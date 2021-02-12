@@ -1,5 +1,5 @@
 {% set name = "zfit" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d33341101100aa37c0adb1ebee369d98fbd284714a79434d7a560bad70f63d12
+  sha256: 001e42e08e71e3b6b13542134a2501ef9132c1895eeadf40cf43cc9a75121585
 
 build:
   number: 0
@@ -22,23 +22,21 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python >=3.6,<3.8
-    - tensorflow-base >=2.1.0
-    - tensorflow-probability >=0.8.0
-    - scipy >=1.2
-    - uproot
-    - pandas
-    - numpy
-    - iminuit
-    - colorlog
-    - texttable
-    - tabulate
-    - ordered-set
-    - numdifftools
-    - colored
-    - colorama
-    # Workaround for https://github.com/conda-forge/tensorflow-probability-feedstock/pull/11
-    - decorator
-    - cloudpickle >=0.6.1
+- tensorflow-base >=2.3.1,<2.4
+- tensorflow_probability ==0.11
+- scipy >=1.2
+- uproot
+- pandas
+- numpy >=1.16
+- iminuit >=1.4
+- colorlog
+- texttable
+- tabulate
+- colored
+- colorama
+- ordered-set
+- numdifftools
+- tensorflow-addons
 
 test:
   imports:
