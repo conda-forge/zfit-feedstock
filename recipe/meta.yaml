@@ -16,29 +16,29 @@ build:
 
 requirements:
   host:
-    - pip
-    - python >=3.6,<3.9
-    - setuptools_scm
-    - setuptools_scm_git_archive
-      run:
-    - colorama
-    - colored
-    - colorlog
-    - dotmap
-    - iminuit >=2.3
-    - ipyopt
-    - nlopt
-    - numdifftools
-    - numpy >=1.16
-    - ordered-set
-    - pandas
-    - scipy >=1.2
-    - tabulate
-    - tensorflow ~=2.4.1
-    - tensorflow-addons
-    - tensorflow_probability ~=0.12.0
-    - texttable
-    - uproot >=4,<5
+      - pip
+      - python >=3.6,<3.9
+      - setuptools_scm
+      - setuptools_scm_git_archive
+  run:
+      - colorama
+      - colored
+      - colorlog
+      - dotmap
+      - iminuit >=2.3
+      - ipyopt
+      - nlopt
+      - numdifftools
+      - numpy >=1.16
+      - ordered-set
+      - pandas
+      - scipy >=1.2
+      - tabulate
+      - tensorflow ~=2.4.1
+      - tensorflow-addons
+      - tensorflow_probability ~=0.12.0
+      - texttable
+      - uproot >=4,<5
 
 test:
   imports:
