@@ -37,7 +37,7 @@ requirements:
       - tabulate
       - tensorflow ~=2.4.1
       - tensorflow-addons
-      - tensorflow_probability =0.12
+      - tensorflow-probability =0.12
       - texttable
       - uproot >=4,<5
 
