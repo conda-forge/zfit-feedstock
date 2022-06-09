@@ -13,6 +13,8 @@ build:
   number: 0
   script: 
   - '{{ PYTHON }} -m pip install . --no-deps -vv '
+  # HACK below, conda packages not available, unfortunately
+  - '{{ PYTHON }} -m pip install "tf-quant-finance<0.0.1.dev33" "tensorlfow-addons~=0.14.0"'
   noarch: python
 
 requirements:
@@ -21,6 +23,9 @@ requirements:
     - python >=3.6,<3.10
     - setuptools_scm
     - setuptools_scm_git_archive
+    # HACK below in order to have deps for tf quant and tfa installed
+    - tensorflow-base >=2.6.0,<2.7
+    - tensorflow-probability >=0.13.0,<0.14
   run:
     - python >=3.6,<3.10
     - tensorflow-base >=2.6.0,<2.7
@@ -29,7 +34,7 @@ requirements:
     - colored
     - colorama
     - dotmap
-    - iminuit >=2.0
+    - iminuit >=2.3
     - nlopt
     - numdifftools
     - numpy
