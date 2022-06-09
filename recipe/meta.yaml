@@ -23,8 +23,8 @@ build:
   number: 0
   script: 
   # HACK below, conda packages not available, unfortunately
-  - '{{ PYTHON }} -m pip install tf_quant_finance/*.whl
-  - '{{ PYTHON }} -m pip install tensorflow-addons/
+  - '{{ PYTHON }} -m pip install tf_quant_finance/*.whl'
+  - '{{ PYTHON }} -m pip install tensorflow-addons'
   - '{{ PYTHON }} -m pip install . --no-deps -vv '
   noarch: python
 
