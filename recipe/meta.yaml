@@ -14,7 +14,7 @@ source:
   - url: https://files.pythonhosted.org/packages/f9/49/9607da967df5d769f2741084aed6f7765183ec92b1b0e8619e5535a7c26d/tf_quant_finance-{{ tf_quant_finance_version }}-py2.py3-none-any.whl
     sha256: 2e33eddfb1af9a066ab39e6d0670f85e2f0933898deb994b9a0c6cdcea574bcc
     folder: tf_quant_finance
-    
+
   - url: https://github.com/tensorflow/addons/archive/refs/tags/v{{ tfa_version }}.tar.gz
     sha256: da9eaf683192054db73941e0de34d83754be4054dc92c409bc4693c3f3091586
     folder: tensorflow_addons_folder
@@ -33,7 +33,7 @@ requirements:
     - python >=3.7,<3.10
     - setuptools_scm
     - setuptools_scm_git_archive
-    HACK below in order to have deps for tf quant and tfa installed
+#     HACK below in order to have deps for tf quant and tfa installed
     - tensorflow-base >=2.6.0,<2.7
     - tensorflow-probability >=0.13.0,<0.14
   run:
