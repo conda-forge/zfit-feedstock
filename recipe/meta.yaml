@@ -17,14 +17,13 @@ source:
     
   - url: https://github.com/tensorflow/addons/archive/refs/tags/v{{ tfa_version }}.tar.gz
     sha256: da9eaf683192054db73941e0de34d83754be4054dc92c409bc4693c3f3091586
-    folder: tensorflow-addons_folder
+    folder: tensorflow_addons_folder
 
 build:
   number: 0
   script: 
-  - '{{ PYTHON }} -m pip install tf_quant_finance/*.whl'
-  - '{{ PYTHON }} -m pip install tensorflow-addons-folder'
-  # HACK above, conda packages not available, unfortunately
+  - '{{ PYTHON }} -m pip install tf_quant_finance/*.whl '
+  - '{{ PYTHON }} -m pip install tensorflow_addons_folder '
   - '{{ PYTHON }} -m pip install . --no-deps -vv '
   noarch: python
 
