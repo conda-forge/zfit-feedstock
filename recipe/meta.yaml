@@ -12,9 +12,9 @@ source:
 build:
   number: 0
   script: 
-  - '{{ PYTHON }} -m pip install . --no-deps -vv '
   # HACK below, conda packages not available, unfortunately
   - '{{ PYTHON }} -m pip install "tf-quant-finance==0.0.1.dev32" "tensorflow-addons~=0.14.0"'
+  - '{{ PYTHON }} -m pip install . --no-deps -vv '
   noarch: python
 
 requirements:
