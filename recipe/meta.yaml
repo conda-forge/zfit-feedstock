@@ -11,7 +11,8 @@ source:
 
 build:
   number: 0
-  script: '{{ PYTHON }} -m pip install . -vv '
+  script: 
+  - '{{ PYTHON }} -m pip install . --no-deps -vv '
   noarch: python
 
 requirements:
@@ -24,19 +25,21 @@ requirements:
     - python >=3.6,<3.10
     - tensorflow-base >=2.6.0,<2.7
     - tensorflow-probability >=0.13.0,<0.14
-    - scipy >=1.2
-    - uproot >=4.0
-    - pandas
-    - numpy
-    - iminuit >=2.0
     - colorlog
-    - texttable
-    - tabulate
-    - ordered-set
-    - numdifftools
     - colored
     - colorama
-
+    - dotmap
+    - iminuit >=2.0
+    - nlopt
+    - numdifftools
+    - numpy
+    - ordered-set
+    - pandas
+    - scipy >=1.2
+    - uproot >=4.0
+    - texttable
+    - tabulate
+    
 test:
   imports:
     - zfit
