@@ -20,14 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<3.10
+    - python >=3.7,<3.10
     - setuptools_scm
     - setuptools_scm_git_archive
     # HACK below in order to have deps for tf quant and tfa installed
     - tensorflow-base >=2.6.0,<2.7
     - tensorflow-probability >=0.13.0,<0.14
   run:
-    - python >=3.6,<3.10
+    - python >=3.7,<3.10
     - tensorflow-base >=2.6.0,<2.7
     - tensorflow-probability >=0.13.0,<0.14
     - colorlog
