@@ -21,24 +21,35 @@ requirements:
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
-    - python >=3.6,<3.8
-    - tensorflow-base >=2.1.0
-    - tensorflow-probability >=0.8.0
-    - scipy >=1.2
+    - python >=3.8,<3.11
+    - tensorflow-base >=2.12,<2.13
+    - tensorflow-probability >=0.20, <=0.21
+    - scipy >=1.3
+    - boost-histogram
+    - colorlog
+    - deprecated
+    - dill
+    - dotmap
     - uproot
     - pandas
     - numpy
-    - iminuit
-    - colorlog
+    - iminuit >=2.3
+    - frozendict
+    - hist
     - texttable
     - tabulate
     - ordered-set
+    - jacobi
+    - pydantic
     - numdifftools
+    - pyyaml
     - colored
     - colorama
-    # Workaround for https://github.com/conda-forge/tensorflow-probability-feedstock/pull/11
-    - decorator
+    - typing_extensions
+    - xxhash
+    - uhi
     - cloudpickle >=0.6.1
+
 
 test:
   imports:
@@ -61,5 +72,5 @@ about:
 extra:
   recipe-maintainers:
     - chrisburr
-    - mayou36
+    - jonas-eschle
     - henryiii
