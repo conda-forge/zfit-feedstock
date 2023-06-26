@@ -48,6 +48,9 @@ requirements:
     - typing_extensions
     - xxhash
     - uhi
+    - asdf
+    - ipyopt
+    - nlopt
 
 
 test:
