@@ -52,6 +52,7 @@ requirements:
     - ipyopt
     - nlopt
     - attrs
+    - zfit_interface
 
 
 test:
