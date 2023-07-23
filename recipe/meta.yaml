@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - tensorflow-base >=2.12.0,<2.13.0
     - tensorflow-probability >=0.20.0,<0.21.0
     - scipy >=1.3
