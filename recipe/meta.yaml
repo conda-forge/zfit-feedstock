@@ -1,5 +1,5 @@
 {% set name = "zfit" %}
-{% set version = "0.14.1" %}
+{% set version = "0.15.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e991d9b540d799dcaf1e61c735e4a674cb65d9b684cefa4680646cc59ee9500d
+  sha256: 9fd06dba6f40347916bec0ee3346919dc6dcd7a6872a7fa551db63fb0c35de7e
 
 build:
   number: 0
@@ -22,8 +22,8 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python >=3.8,<3.12
-    - tensorflow-base >=2.12.0,<2.13.0
-    - tensorflow-probability >=0.20.0,<0.21.0
+    - tensorflow-base >=2.12.0,<2.14.0
+    - tensorflow-probability >=0.20.0,<0.22.0
     - scipy >=1.3
     - boost-histogram
     - colorlog
@@ -40,7 +40,7 @@ requirements:
     - tabulate
     - ordered-set
     - jacobi
-    - pydantic
+    - pydantic <2.0.0
     - numdifftools
     - pyyaml
     - colored
