@@ -33,7 +33,7 @@ requirements:
     - uproot
     - pandas
     - numpy
-    - iminuit >=2.3
+    - iminuit >=2.4
     - frozendict
     - hist
     - texttable
