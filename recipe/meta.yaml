@@ -49,7 +49,7 @@ requirements:
     - xxhash
     - uhi
     - asdf
-    - ipyopt
+    - ipyopt  # [osx and x86_64]
     - nlopt
     - attrs
     - zfit_interface
