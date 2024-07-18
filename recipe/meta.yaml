@@ -1,5 +1,5 @@
 {% set name = "zfit" %}
-{% set version = "0.21.0" %}
+{% set version = "0.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9d57f8210c5177df615de7f27d937cf0fc9237fb83360e291e2361604d7fe947
+  sha256: 7636c42c93d299bcc4346afe46df1ba615acedbc2380711e68a3e47a5445d4fa
 
 build:
   number: 0
