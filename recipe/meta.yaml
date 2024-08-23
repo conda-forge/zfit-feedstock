@@ -1,5 +1,5 @@
 {% set name = "zfit" %}
-{% set version = "0.21.1" %}
+{% set version = "0.22.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7636c42c93d299bcc4346afe46df1ba615acedbc2380711e68a3e47a5445d4fa
+  sha256: b88fe03ab91d1327fd1f23ba27d602fa8a4a82d74bd8ed5d7c08f167a6b223df
 
 build:
   number: 0
@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.9,<3.13
+    - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
@@ -40,7 +41,7 @@ requirements:
     - tabulate
     - ordered-set
     - jacobi
-    - pydantic <2.0.0
+    - pydantic >=2.0.0
     - numdifftools
     - pyyaml
     - colored
