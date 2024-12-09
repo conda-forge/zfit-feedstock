@@ -1,5 +1,6 @@
 {% set name = "zfit" %}
 {% set version = "0.23.0" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
