@@ -1,5 +1,5 @@
 {% set name = "zfit" %}
-{% set version = "0.24.1" %}
+{% set version = "0.24.3" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9a0423302ac5647e910feadce634b8b0a1806c1866f4f55795db64918cbdd2d8
+  sha256: 0efe47a5c597f7c730ac25495625f8bb4460f2fa4a0f4c387f503339ac8e91b5
 
 build:
-  number: 1
+  number: 0
   script: '{{ PYTHON }} -m pip install . -vv '
   noarch: python
 
