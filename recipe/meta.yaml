@@ -1,0 +1,84 @@
+{% set name = "zfit" %}
+{% set version = "0.25.0" %}
+{% set python_min = "3.9" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ac5a92bc284094eae55dd9afe1fe2c8f3f67a402dfc7a8ad6087a9ea29ff2b41
+
+build:
+  number: 0
+  script: '{{ PYTHON }} -m pip install . -vv '
+  noarch: python
+
+requirements:
+  host:
+    - pip
+    - python {{ python_min }}
+    - setuptools
+    - setuptools_scm
+    - setuptools_scm_git_archive
+  run:
+    - python-xxhash
+    - tensorflow >=2.16.2,<2.20
+    - python >={{ python_min }},<3.13
+    - tensorflow-base >=2.16.0,<2.19.0
+    - tensorflow-probability >=0.24,<0.27
+    - scipy >=1.2
+    - boost-histogram
+    - colorlog
+    - deprecated
+    - dill
+    - dotmap
+    - uproot >=4
+    - pandas
+    - numpy >=1.16
+    - iminuit >=2.3
+    - frozendict
+    - hist
+    - texttable
+    - tabulate
+    - ordered-set
+    - jacobi
+    - pydantic >=2.0.0
+    - numdifftools
+    - pyyaml
+    - colored
+    - colorama
+    - typing_extensions
+    - xxhash
+    - uhi
+    - asdf
+    - attrs
+    - zfit_interface
+
+
+test:
+  requires:
+    - python {{ python_min }}
+  imports:
+    - zfit
+    - zfit.core
+    - zfit.minimizers
+    - zfit.models
+    - zfit.util
+    - zfit.z
+
+about:
+  home: https://github.com/zfit/zfit
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: scalable pythonic model fitting for High Energy Physics
+  doc_url: https://zfit.readthedocs.io/
+  dev_url: https://github.com/zfit/zfit
+
+extra:
+  recipe-maintainers:
+    - chrisburr
+    - jonas-eschle
+    - henryiii
