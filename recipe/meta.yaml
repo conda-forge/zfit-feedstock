@@ -28,6 +28,7 @@ requirements:
     - python >={{ python_min }},<3.13
     - tensorflow-base >=2.16.0,<2.20.0
     - tensorflow-probability >=0.24,<0.27
+    - tf-keras
     - scipy >=1.2
     - boost-histogram
     - colorlog
