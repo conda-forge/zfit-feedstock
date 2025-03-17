@@ -21,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python 3.9.*
+    - python ${{ python_min }}.*
     - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
