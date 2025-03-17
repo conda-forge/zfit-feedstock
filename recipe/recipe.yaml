@@ -1,33 +1,37 @@
-{% set name = "zfit" %}
-{% set version = "0.25.0" %}
-{% set python_min = "3.9" %}
+schema_version: 1
+
+context:
+  name: zfit
+  version: 0.25.0
+  python_min: 3.9
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: ac5a92bc284094eae55dd9afe1fe2c8f3f67a402dfc7a8ad6087a9ea29ff2b41
 
 build:
-  number: 0
-  script: '{{ PYTHON }} -m pip install . -vv '
+  number: 1
   noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
     - python-xxhash
     - tensorflow >=2.16.2,<2.20
-    - python >={{ python_min }},<3.13
+    - python >=${{ python_min }},<3.13
     - tensorflow-base >=2.16.0,<2.20.0
     - tensorflow-probability >=0.24,<0.27
+    - tf-keras
     - tf-keras
     - scipy >=1.2
     - boost-histogram
@@ -57,26 +61,24 @@ requirements:
     - attrs
     - zfit_interface
 
-
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - zfit
-    - zfit.core
-    - zfit.minimizers
-    - zfit.models
-    - zfit.util
-    - zfit.z
-
+tests:
+  - python:
+      imports:
+        - zfit
+        - zfit.core
+        - zfit.minimizers
+        - zfit.models
+        - zfit.util
+        - zfit.z
+      pip_check: false
+      python_version: ${{ python_min }}.*
 about:
-  home: https://github.com/zfit/zfit
   license: BSD-3-Clause
-  license_family: BSD
   license_file: LICENSE
   summary: scalable pythonic model fitting for High Energy Physics
-  doc_url: https://zfit.readthedocs.io/
-  dev_url: https://github.com/zfit/zfit
+  homepage: https://github.com/zfit/zfit
+  repository: https://github.com/zfit/zfit
+  documentation: https://zfit.readthedocs.io/
 
 extra:
   recipe-maintainers:
