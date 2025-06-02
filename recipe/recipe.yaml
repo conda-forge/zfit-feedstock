@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: zfit
-  version: 0.25.0
-  python_min: 3.9
+  version: "0.26.0"
+  python_min: '3.9'
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: ac5a92bc284094eae55dd9afe1fe2c8f3f67a402dfc7a8ad6087a9ea29ff2b41
+  sha256: c61e55177055e775fefb6d985b643a7db8e8eb16e872d8dc66434b36f15c0b36
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
