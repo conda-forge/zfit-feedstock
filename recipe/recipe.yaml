@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: zfit
   version: "0.27.0"
-  python_min: '3.9'
+  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
