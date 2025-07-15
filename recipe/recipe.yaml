@@ -14,7 +14,7 @@ source:
   sha256: 27b16be9ed4619fe437c3f533a671e44329a1172231d87f94ed93d958b7691b9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -61,6 +61,8 @@ requirements:
     - ipyopt
     - nlopt
     - zfit_interface
+    - matplotlib
+    - mplhep
 
 tests:
   - python:
