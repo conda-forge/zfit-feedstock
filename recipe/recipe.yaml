@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: zfit
-  version: "0.27.0"
+  version: "0.27.1"
   python_min: '3.10'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 2e8a906d56ab33949a241b02002ea1517d515a402e8b9680b6b7d38d75c99fc8
+  sha256: 27b16be9ed4619fe437c3f533a671e44329a1172231d87f94ed93d958b7691b9
 
 build:
   number: 0
