@@ -61,7 +61,7 @@ requirements:
     - ipyopt
     - nlopt
     - zfit_interface
-    - matplotlib
+    - matplotlib-base
     - mplhep
 
 tests:
