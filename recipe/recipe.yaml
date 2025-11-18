@@ -53,6 +53,17 @@ requirements:
     - uhi
     - attrs
     - zfit_interface
+    - xxhash
+    - uhi
+    - asdf
+    - attrs
+    - ipyopt
+    - nlopt
+    - zfit_interface
+    - matplotlib-base
+    - mplhep
+    - emcee >=3.0.0
+    - arviz >=0.14.0
 tests:
   - python:
       imports:
